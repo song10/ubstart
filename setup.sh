@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # get git installed
-$(which git) || \
+_=$(which git) || \
 	sudo apt-get install -y \
 		git \
 
@@ -14,7 +14,6 @@ else
 	git remote add origin https://github.com/song10/ubhome.git
 	git fetch origin
 	git checkout -b master origin/master
-	. .bashrc
 fi
 
 # get ~/bin (bin.git)
@@ -37,9 +36,14 @@ else
 	git clone https://github.com/song10/ubfavor.git
 fi
 
+# finish
+. ~/.bash_aliases
+
+# ?
 if false; then
 sudo apt-get install -y \
 	build-essential \
 	linux-headers-generic \
 	git \
+
 fi
