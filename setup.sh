@@ -1,9 +1,7 @@
 #!/bin/sh
 
 # get git installed
-_=$(which git) || \
-	sudo apt-get install -y \
-		git \
+_=$(which git) || sudo apt-get install -y git
 
 # get ~ (ubhome.git)
 cd
@@ -37,7 +35,7 @@ else
 fi
 
 # finish
-. ~/.bash_aliases
+source ~/.bashrc
 
 # ?
 if false; then
