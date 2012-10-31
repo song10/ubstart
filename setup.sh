@@ -35,7 +35,7 @@ else
 fi
 
 # finish
-source ~/.bashrc
+exec bash
 
 # ?
 if false; then
