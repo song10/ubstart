@@ -24,6 +24,7 @@ else
 fi
 
 # get ~/wrk/ubfavor (ubfavor.git)
+if [ "all" = "$1" ]; then
 cd
 mkdir -p wrk
 cd wrk
@@ -32,6 +33,7 @@ if test -d ubfavor/.git; then
 	git pull --rebase
 else
 	git clone https://github.com/song10/ubfavor.git
+fi
 fi
 
 # finish
