@@ -1,10 +1,12 @@
 #!/bin/sh
 
+INSDIR=`pwd`
+
 # get git installed
 _=$(which git) || sudo apt-get install -y git
 
 # get ~ (ubhome.git)
-cd
+cd $INSDIR
 if test -d .git; then
 	git pull --rebase
 else
@@ -15,7 +17,7 @@ else
 fi
 
 # get ~/bin (bin.git)
-cd
+cd $INSDIR
 if test -d bin/.git; then
 	cd ~/bin
 	git pull --rebase
@@ -25,7 +27,7 @@ fi
 
 # get ~/wrk/ubfavor (ubfavor.git)
 if [ "all" = "$1" ]; then
-cd
+cd $INSDIR
 mkdir -p wrk
 cd wrk
 if test -d ubfavor/.git; then
