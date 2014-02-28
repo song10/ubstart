@@ -27,25 +27,16 @@ fi
 
 # get ~/wrk/ubfavor (ubfavor.git)
 if [ "all" = "$1" ]; then
-cd $INSDIR
-mkdir -p wrk
-cd wrk
-if test -d ubfavor/.git; then
-	cd ubfavor
-	git pull --rebase
-else
-	git clone https://github.com/song10/ubfavor.git
-fi
+	cd $INSDIR
+	mkdir -p wrk
+	cd wrk
+	if test -d ubfavor/.git; then
+		cd ubfavor
+		git pull --rebase
+	else
+		git clone https://github.com/song10/ubfavor.git
+	fi
 fi
 
 # finish
 exec bash
-
-# ?
-if false; then
-sudo apt-get install -y \
-	build-essential \
-	linux-headers-generic \
-	git \
-
-fi
