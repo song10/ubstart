@@ -2,8 +2,14 @@
 
 INSDIR=`pwd`
 
-# get git installed
-_=$(which git) || sudo apt-get install -y git
+# ensure latest git installed
+type git > /dev/null
+
+if [ "$0" != "0" ]; then
+	sudo add-apt-repository ppa:git-core/ppa
+	sudo apt-get update
+	sudo apt-get -y install git
+fi
 
 # get ~ (ubhome.git)
 cd $INSDIR
