@@ -6,7 +6,6 @@ INSDIR=`pwd`
 command -v git > /dev/null
 if [ "$0" != "0" ]; then
 
-
 	# ensure add-apt-repository installed
 	command -v add-apt-repository > /dev/null
 	if [ "$0" != "0" ]; then
