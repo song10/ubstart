@@ -4,8 +4,15 @@ INSDIR=`pwd`
 
 # ensure latest git installed
 command -v git > /dev/null
-
 if [ "$0" != "0" ]; then
+
+
+	# ensure add-apt-repository installed
+	command -v add-apt-repository > /dev/null
+	if [ "$0" != "0" ]; then
+		sudo apt-get -y install python-software-properties
+	fi
+
 	sudo add-apt-repository ppa:git-core/ppa
 	sudo apt-get update
 	sudo apt-get -y install git
