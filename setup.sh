@@ -3,7 +3,7 @@
 INSDIR=`pwd`
 
 # ensure latest git installed
-type git > /dev/null
+command -v git > /dev/null
 
 if [ "$0" != "0" ]; then
 	sudo add-apt-repository ppa:git-core/ppa
